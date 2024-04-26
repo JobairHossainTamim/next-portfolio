@@ -2,3 +2,4 @@
 
 - next-themes
 - classnames
+- react-masonry-css

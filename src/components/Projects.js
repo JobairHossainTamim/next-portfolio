@@ -26,8 +26,12 @@ const Projects = () => {
         <Heading>projects</Heading>
         {data.map((project) => (
           <div
+            onClick={() => {
+              toggleModal();
+              setDetails(project);
+            }}
             key={project.id}
-            className="flex flex-wrap gap-5 w-full lg:w-8/12 mb-10"
+            className="flex flex-wrap gap-5 w-full lg:w-8/12 mb-10 cursor-pointer"
           >
             <div className="relative w-full md:w-[120px] pt-[56.25%] md:pt-0 md:h-20 rounded-lg overflow-hidden">
               <Image
@@ -42,13 +46,7 @@ const Projects = () => {
                 <h2 className="text-lg md:text-xl font-bold light:text-zinc-700 dark:text-zinc-400 leading-[25px]">
                   {project.title}
                 </h2>
-                <FaArrowTrendUp
-                  onClick={() => {
-                    toggleModal();
-                    setDetails(project);
-                  }}
-                  className="text-[20px] light:text-zinc-900 dark:text-white cursor-pointer"
-                />
+                <FaArrowTrendUp className="text-[20px] light:text-zinc-900 dark:text-white cursor-pointer" />
               </div>
 
               <p className="text-base font-semibold light:text-zinc-500 dark:text-zinc-400 mt-2">

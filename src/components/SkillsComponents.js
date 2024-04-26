@@ -5,12 +5,12 @@ const SkillComponent = ({ skill }) => {
     <div className="flex items-center space-x-2 light:bg-zinc-100 dark:bg-zinc-800 px-3 py-2">
       <div
         className={classNames("relative w-[25px] h-[25px]", {
-          "bg-white rounded-full": skill.name === "next",
+          "dark:bg-white rounded-full": skill.name === "next",
         })}
       >
         <Image src={skill.image} fill className="w-full h-full object-cover" />
       </div>
-      <span className="light:text-zinc-700 dark:text-white capitalize text-sm md:text-base font-bold">
+      <span className="text-zinc-700 dark:text-white capitalize text-sm md:text-base font-bold">
         {skill.name}
       </span>
     </div>
